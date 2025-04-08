@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>เรซูเม่ของฉัน</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed; /* ภาพพื้นหลังอยู่กับที่ */
+      }
+      
+      .container {
+  position: relative; /* ต้องมี เพื่อให้ .photo-box อ้างอิงได้ */
+  padding: 20px;
+}
+
+.photo-box {
+  position: fixed;
+  top: 75px;      /* ปรับตำแหน่งบน */
+  right: 320px;    /* ปรับตำแหน่งขวา */
+  width: 144px;
+  height: 144px;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  background-color: #f0f0f0;
+  z-index: 1000;
+}
+
+.photo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+.rounded-circle {
+  border-radius: 50%;
+}
+    </style>    
+  </head>  
+  <body class="bg-white text-gray-600 font-sans">
+  <!-- แถวรูปภาพ (จัดตำแหน่งแน่นอนด้วย absolute) -->
+  <div class="absolute top-[80px] right-4 z-10 w-32 h-32 rounded-xl overflow-hidden border-2 border-white shadow-md bg-gray-100">
+    <img 
+      src="https://lh3.googleusercontent.com/zdxd8brc1OKGZCaCPesS3XZW7hRXBn51QJ_t39Kzk0QVjSeUzOdijhNB_gu-t_ziqrr-fUBdPJsL0sqvTClXXmVO0PKoCTtA4T1vEMTZ6EzpPe7dxq9CkcfI6WMS4IU8hw=w1280" 
+      alt="รูปโปรไฟล์" 
+      class="w-full h-full object-cover object-bottom"
+    >
+  </div>
+  
+  <!-- ชื่อ -->
+  <p class="absolute top-[208px] right-2 z-10 text-l font-bold">
+    นายบุญนาค ใจวงค์
+  </p>
+    </div>
+  <header class="sticky top-0 bg-white shadow z-10">
+    <nav class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <img src="https://frdfund.org/th/wp-content/uploads/2019/11/logo-frdfund.png" alt="Logo" class="w-10 h-10">
+        <h1 class="text-xl font-bold">FRDFUND </h1>
+      </div>
+      <ul class="flex space-x-5 text-sm">
+        <li><a href="#about" class="hover:text-blue-1000">เกี่ยวกับฉัน</a></li>
+        <li><a href="#skills" class="hover:text-blue-1000">ทักษะ</a></li>
+        <li><a href="#experience" class="hover:text-blue-1000">ประสบการณ์</a></li>
+        <li><a href="#contact" class="hover:text-blue-1000">ติดต่อ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-5 py-5 bg-white/70 backdrop-blur-md rounded-xl shadow">
+    <section id="about" class="scroll-mt-16">
+      <h2 class="text-2xl font-semibold mb-2">เกี่ยวกับฉัน</h2>
+      <P>ปัจจุบันดำรงตำแหน่งลูกจ้างกลุ่มงานทั่วไป สำนักงานกองทุนฟื้นฟูและพัฒนาเกษตรกร</P>
+      <P>สาขาจังหวัดอุตรดิตถ์ โดยเริ่มเข้ามาทำงานในตำแหน่งลูกจ้างโครงการเร่งรัดแก้ไขปัญหาหนี้สิน</P>
+      <P>เกษตรกร สมาชิกกองทุนฟื้นฟูและพัฒนาเกษตรกร ลูกหนี้ธนาคารของรัฐ 4 แห่ง</p> 
+      <P>มื่อวันที่ 1 กุมภาพันธ์ 2566 </p>
+      <P>- รับผิดชอบในการติดตามเกษตรกรเเจ้งความประสงค์เเละส่งแบบเเจ้งความประสงค์ให้สถาบันเจ้าหนี้ </p>
+      <P>- ปฏิบัติงานช่วยเหลือพนักงานด้านงานพื้นฟูเเละงานด้านจัดการหนี้</P>
+    </section>
+    <section id="skills" class="scroll-mt-16">
+      <h2 class="text-2xl font-semibold mb-2">ทักษะ</h2>
+      <ul class="list-disc list-inside">
+        <li>วางโครงสร้างระบบแลน (LAN Infrastructure Design)</li>
+	 <li> ติดตั้งและกำหนดค่าอุปกรณ์เครือข่าย (Router, Switch, Access Point)</li>
+        <li>ออกแบบวงจรอิเล็กทรอนิกส์</li>
+        <li>พัฒนาเว็บเบื้องต้น HTML</li>
+        <li>จัดการและบริหารข้อมูลด้วย Google Sheets, Excel และฐานข้อมูลเบื้องต้น</li>
+        <li>สร้างระบบค้นหาข้อมูล Google Site โดยการดึง API จาก google sheet <a href="https://sites.google.com/view/frduttaradit/%E0%B8%AB%E0%B8%99%E0%B8%B2%E0%B9%81%E0%B8%A3%E0%B8%81" class="UTTFRDFUND"><คลิก></a></li>
+      </ul>
+    </section>
+
+    <section id="experience" class="scroll-mt-16">
+      <h2 class="text-2xl font-semibold mb-2">ประสบการณ์การทำงานสำนักงานกองทุนฟื้นฟูเเละพัฒนาเกษตรกร</h2>
+	<H2 class="text-1xl font-semibold mb-1">ด้านงานฟื้นฟูและพัฒนาเกษตรกร</H2>
+    <ul class="list-disc list-inside">
+	<li>ลงพื้นที่พัฒนาโครงการให้กับองค์กรเกษตรกร</li>
+	<li>ลงพื้นที่จัดทำสัญญาโครงการกู้ยืม</li>
+  <li><a href="https://www.facebook.com/share/p/1H9KmyrqPg/" target="_blank" class="text-black-500 ">ลงพื้นที่เพื่อติดตามและประเมินผลโครงการฟื้นฟูและพัฒนาเกษตรกร</a></li>
+	<li>ลงพื้นที่ปรับแผนโครงการ</li>
+	<li><a href="https://www.facebook.com/share/p/1DxuhztpJi/" target="_blank" class="text-black-500 ">ลงพื้นที่เพื่อปิดโครงการ</a></li>
+	<br>
+	<H2 class="text-1xl font-semibold mb-1">ด้านงานจัดการหนี้</H2>
+	<li>จัดเตรียมข้อมูลเพื่อจัดทำนิติกรรมสัญญา</li>
+	<li>ลงพื้นที่จัดทำนิติกรรมสัญญาให้กับเกษตรกรที่ได้รับการจัดการหนี้</li>
+	<li>ลงพื้นที่ติดตามเกษตรกรที่ได้รับการจัดการหนี้ พร้อมทั้งจัดทำเอกสารรับสภาพหนี้เเละบันทึกต่อท้ายสัญญา</li>
+	<li>จัดทำเอกสารเพื่อปิดบัญชีลูกหนี้เกษตรกร</li>
+  <BR>
+	<H2 class="text-1xl font-semibold mb-1">ด้านงานโครงการแก้ไขปัญหาหนี้สินเกษตรกร สมาชิกกองทุนฟื้นฟูและพัฒนาเกษตรกร</H2>
+	<H2 class="text-1xl font-semibold mb-1">ลูกหนี้ธนาคารของรัฐ 4 แห่ง.</H2>
+  <li>จัดเตรียมข้อมูลเพื่อติดตามเกษตรกรผู้มีรายชื่อได้รับสิทธิเข้าร่วมโครงการ</li>
+	<li>ลงพื้นที่ติดตามเกษตรกรพร้อมจัดทำแบบเเจ้งความประสงค์</li>
+	<li>จัดทำสำเนาแบบเเจ้งความประสงค์นำส่งสถาบันเจ้าหนี้</li>
+	<li>ติดตามการทำสัญญาปรับโครงสร้างหนี้กับเกษตรกร</li>
+  <li>จัดทำระบบจัดเก็บข้อมูลสำเนาสัญญาปรับโครงสร้างหนี้ของเกษตรกร</li>
+  </ul>
+ 
+    <section id="contact">
+      <h2 class="text-2xl font-semibold mb-2">ติดต่อ</h2>
+      <p>อีเมล: boonnark2020@gmail.com</p>
+      <p>โทร: 064-758-0278</p>
+    </section>
+  </main>
+
+  <footer class="text-center py-6 text-sm text-gray-500">
+    &copy; Resume Boonnark Jaiwong
+  </footer>
+</body>
+</html>
